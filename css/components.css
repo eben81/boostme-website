@@ -43,10 +43,10 @@
 .hero__lighting {
   z-index: 3;
   background:
-    radial-gradient(ellipse 46% 82% at 77% 48%, var(--color-hero-ambient-a) 0%, transparent 68%),
-    radial-gradient(ellipse 36% 68% at 63% 68%, var(--color-hero-ambient-b) 0%, transparent 74%),
-    radial-gradient(ellipse 32% 48% at 89% 18%, var(--color-hero-ambient-c) 0%, transparent 76%),
-    radial-gradient(ellipse 58% 30% at 74% 92%, var(--color-hero-ambient-d) 0%, transparent 78%);
+    radial-gradient(ellipse 54% 88% at 79% 52%, var(--color-hero-ambient-a) 0%, var(--color-hero-ambient-b) 24%, transparent 72%),
+    radial-gradient(ellipse 34% 64% at 67% 37%, var(--color-hero-ambient-b) 0%, var(--color-hero-ambient-c) 34%, transparent 78%),
+    radial-gradient(ellipse 48% 32% at 83% 78%, var(--color-hero-ambient-c) 0%, var(--color-hero-ambient-d) 42%, transparent 82%),
+    radial-gradient(ellipse 24% 76% at 94% 43%, var(--color-hero-ambient-d) 0%, transparent 76%);
 }
 
 .hero-nav {
@@ -223,23 +223,24 @@
 }
 
 .button--secondary:hover {
-  border-color: var(--color-hero-text-muted);
-  background: var(--color-hero-glass);
+  border-color: var(--color-button-border-hover);
+  background: var(--color-button-tint-hover);
 }
 
 .hero__primary-cta {
   height: var(--space-7);
-  gap: var(--space-2);
-  padding-inline: var(--space-4);
+  gap: var(--gap-button-icon);
+  padding-inline: var(--padding-button-inline);
   border-radius: var(--radius-large);
   font-weight: var(--font-weight-semibold);
   transition-duration: var(--duration-button);
+  transition-timing-function: var(--ease-button);
 }
 
 .button__icon {
   display: block;
   flex: 0 0 auto;
-  transition: transform var(--duration-button) var(--ease-standard);
+  transition: transform var(--duration-button) var(--ease-button);
 }
 
 .hero__primary-cta:hover .button__icon {
@@ -274,7 +275,7 @@
   background: var(--color-founder-shadow);
   box-shadow: var(--shadow-founder);
   content: "";
-  opacity: 0.34;
+  opacity: 0.24;
 }
 
 .hero__founder img {
@@ -286,13 +287,13 @@
   position: absolute;
   z-index: 5;
   width: var(--width-hero-card);
-  padding: var(--space-3);
+  padding: var(--padding-hero-card);
   border: var(--border-thin) solid var(--color-hero-border);
   border-radius: var(--radius-large);
   background: var(--color-hero-glass);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(var(--blur-hero-card));
+  -webkit-backdrop-filter: blur(var(--blur-hero-card));
 }
 
 .hero-card--inquiry {
