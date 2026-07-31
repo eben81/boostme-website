@@ -24,6 +24,7 @@
   animation: hero-card-float 8s var(--ease-standard) -2s infinite;
 }
 
+/* Content entrance */
 @keyframes hero-fade {
   from {
     opacity: 0;
@@ -40,6 +41,7 @@
   animation: hero-fade var(--duration-slow) var(--ease-standard) both;
 }
 
+/* Founder remains independently positioned at every breakpoint. */
 @keyframes hero-founder-fade {
   from {
     opacity: 0;
@@ -60,11 +62,13 @@
     scroll-behavior: auto;
   }
 
-  .button {
+  .button,
+  .button__icon {
     transition: none;
   }
 
-  .button:hover {
+  .button:hover,
+  .hero__primary-cta:hover .button__icon {
     transform: none;
   }
 
