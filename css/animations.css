@@ -1,0 +1,76 @@
+/**
+ * Motion stylesheet.
+ *
+ * Add purposeful transitions and keyframes here. Every non-essential motion
+ * effect must have an appropriate prefers-reduced-motion fallback.
+ */
+
+@keyframes hero-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-card--inquiry {
+  animation: hero-card-float 7s var(--ease-standard) infinite;
+}
+
+.hero-card--booking {
+  animation: hero-card-float 8s var(--ease-standard) -2s infinite;
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__content {
+  animation: hero-fade var(--duration-slow) var(--ease-standard) both;
+}
+
+@keyframes hero-founder-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero__founder {
+  animation: hero-founder-fade var(--duration-slow) var(--ease-standard) both;
+  animation-delay: var(--duration-fast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  .hero-card,
+  .hero__content,
+  .hero__founder {
+    animation: none;
+  }
+}

@@ -1,0 +1,120 @@
+/**
+ * Boostme design tokens
+ *
+ * Keep this file limited to approved global primitives. Component-specific
+ * values belong with their component definitions.
+ */
+
+:root {
+  /* Typography */
+  --font-family-heading: "Spectral", Georgia, serif;
+  --font-family-interface: "Inter", Arial, sans-serif;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Brand colors */
+  --color-primary: #00d285;
+  --color-dark-navy: #203749;
+  --color-night-blue: #0f172a;
+  --color-mint: #e6fbf3;
+  --color-background: #f8fafc;
+  --color-white: #ffffff;
+  --color-hero-surface: #0a131e;
+  --color-hero-surface-soft: #132433;
+  --color-hero-text: #f7fafc;
+  --color-hero-text-muted: #b8c6d0;
+  --color-hero-text-subtle: #8496a3;
+  --color-hero-border: rgba(255, 255, 255, 0.14);
+  --color-hero-border-strong: rgba(255, 255, 255, 0.22);
+  --color-hero-glass: rgba(18, 35, 48, 0.74);
+  --color-hero-glass-solid: #122330;
+  --color-hero-glow: rgba(0, 210, 133, 0.17);
+  --color-hero-glow-soft: rgba(115, 211, 194, 0.1);
+  --color-hero-vignette: rgba(5, 10, 16, 0.76);
+  --color-hero-overlay: rgba(2, 8, 13, 0.58);
+  --color-hero-overlay-deep: rgba(2, 7, 12, 0.92);
+  --color-hero-ambient-a: rgba(0, 210, 133, 0.14);
+  --color-hero-ambient-b: rgba(0, 210, 133, 0.08);
+  --color-hero-ambient-c: rgba(137, 255, 217, 0.05);
+  --color-founder-shadow: rgba(0, 0, 0, 0.52);
+  --color-nav-surface: rgba(7, 16, 23, 0.42);
+  --color-primary-hover: #19dfa0;
+  --color-primary-text: #06150f;
+  --color-focus: #8af3ce;
+  --color-status-blue: #82baff;
+  --color-status-amber: #ffc978;
+
+  /* Layout */
+  --width-global: 1440px;
+  --width-content: 1280px;
+  --width-headline: 900px;
+  --width-text: 720px;
+  --width-hero-text: 620px;
+  --width-card-min: 580px;
+  --width-card-max: 640px;
+  --width-page-min: 320px;
+  --width-hero-card: 248px;
+  --width-hero-badges: 280px;
+  --width-hero-copy: 600px;
+  --width-hero-portrait: 690px;
+  --width-hero-copy-tablet: 680px;
+  --width-hero-title-tablet: 640px;
+  --width-hero-portrait-tablet: 560px;
+  --width-hero-nav: 1440px;
+  --width-hero-founder: 900px;
+  --width-hero-founder-tablet: 690px;
+  --height-hero: 900px;
+  --height-hero-tablet: 820px;
+  --height-hero-mobile-visual: 520px;
+
+  /* Borders and radii */
+  --border-thin: 1px;
+  --border-focus: 2px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-button: 0 16px 40px rgba(0, 210, 133, 0.18);
+  --shadow-card: 0 24px 64px rgba(0, 0, 0, 0.3);
+  --shadow-portrait: 0 40px 96px rgba(0, 0, 0, 0.42);
+  --shadow-founder: 0 56px 120px var(--color-founder-shadow);
+  --shadow-nav: 0 16px 48px rgba(0, 0, 0, 0.16);
+
+  /* Motion */
+  --duration-fast: 180ms;
+  --duration-slow: 700ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --offset-hover: -2px;
+
+  /* Responsive thresholds */
+  --breakpoint-tablet: 1100px;
+  --breakpoint-mobile: 760px;
+  --breakpoint-narrow: 480px;
+
+  /* Approved 8-point spacing scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
+  --space-11: 88px;
+  --space-12: 96px;
+  --space-13: 104px;
+  --space-14: 112px;
+  --space-15: 120px;
+  --space-16: 128px;
+  --space-17: 136px;
+  --space-18: 144px;
+
+  /* Section rhythm */
+  --section-space-desktop: var(--space-18);
+  --section-space-tablet: var(--space-12);
+  --section-space-mobile: var(--space-9);
+}

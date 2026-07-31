@@ -1,0 +1,50 @@
+/**
+ * Global stylesheet entry point.
+ *
+ * Global resets, document defaults, typography, accessibility utilities, and
+ * shared layout primitives should be added here when implementation begins.
+ * Global styles remain deliberately small and framework-free.
+ */
+
+@import url("./variables.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: var(--width-page-min);
+  margin: 0;
+  overflow-x: clip;
+  color: var(--color-hero-text);
+  background: var(--color-hero-surface);
+  font-family: var(--font-family-interface);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: var(--border-focus) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+
+::selection {
+  color: var(--color-primary-text);
+  background: var(--color-primary);
+}
