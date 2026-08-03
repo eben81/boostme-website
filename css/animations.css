@@ -5,25 +5,6 @@
  * effect must have an appropriate prefers-reduced-motion fallback.
  */
 
-@keyframes hero-card-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.hero-card--inquiry {
-  animation: hero-card-float 7s var(--ease-standard) infinite;
-}
-
-.hero-card--booking {
-  animation: hero-card-float 8s var(--ease-standard) -2s infinite;
-}
-
 /* Content entrance */
 @keyframes hero-fade {
   from {
@@ -63,18 +44,31 @@
   }
 
   .button,
-  .button__icon {
+  .button__icon,
+  .button__icon-circle,
+  .button__icon-badge {
     transition: none;
   }
 
   .button:hover,
-  .hero__primary-cta:hover .button__icon {
+  .hero__primary-cta:hover .button__icon-circle,
+  .button--secondary:hover .button__icon-badge {
     transform: none;
   }
 
-  .hero-card,
   .hero__content,
   .hero__founder {
     animation: none;
+  }
+
+  .problems__viewport {
+    scroll-behavior: auto;
+  }
+
+  .problem-card,
+  .problem-card__image-wrap,
+  .problem-card__quote,
+  .problems__control {
+    transition: none;
   }
 }

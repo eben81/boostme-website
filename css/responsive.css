@@ -25,11 +25,6 @@
     min-height: var(--height-hero-tablet);
   }
 
-  .hero-nav,
-  .hero__container {
-    width: min(calc(100% - (var(--space-4) * 2)), var(--width-content));
-  }
-
   .hero__container {
     grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
     min-height: calc(var(--height-hero-tablet) - var(--space-12));
@@ -45,13 +40,34 @@
   }
 
   .hero__founder {
-    right: calc(var(--space-10) * -1);
-    width: min(132%, var(--width-hero-founder-tablet));
+    right: calc(var(--space-13) * -1);
+    bottom: 0;
+    width: min(121%, var(--width-hero-founder-tablet));
   }
 
-  .hero-card--inquiry {
-    left: calc(var(--space-3) * -1);
+  .problems {
+    padding-block: var(--section-space-tablet);
   }
+
+  .problems__intro {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+    gap: var(--space-6);
+  }
+
+  .problems__title {
+    font-size: clamp(3rem, 5.7vw, 4rem);
+  }
+
+  .problems__carousel-shell {
+    width: calc(100% + var(--space-3));
+  }
+
+  .problem-card,
+  .problem-card.is-active {
+    width: calc((100vw - var(--space-10)) / 2);
+    flex-basis: calc((100vw - var(--space-10)) / 2);
+  }
+
 }
 
 @media (max-width: 820px) {
@@ -87,33 +103,37 @@
   }
 
   .hero__founder {
-    right: 50%;
-    bottom: calc(var(--space-3) * -1);
-    width: min(118%, var(--width-hero-founder-tablet));
+    right: calc(50% - var(--space-3));
+    bottom: 0;
+    width: min(109%, var(--width-hero-founder-tablet));
     transform: translateX(54%);
   }
 
-  .hero-card {
-    width: min(var(--width-hero-card), calc(100vw - var(--space-6)));
+  .problems__intro {
+    display: block;
   }
 
-  .hero-card--inquiry {
-    top: 12%;
-    left: var(--space-3);
+  .problems__heading,
+  .problems__copy {
+    max-width: 640px;
   }
 
-  .hero-card--booking {
-    right: var(--space-3);
-    bottom: 12%;
+  .problems__copy {
+    margin-top: var(--space-5);
   }
+
+  .problems__cta {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .problems__cta-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
 }
 
 @media (max-width: 480px) {
-  .hero-nav,
-  .hero__container {
-    width: calc(100% - (var(--space-2) * 2));
-  }
-
   .hero-nav__brand {
     font-size: 1.5rem;
   }
@@ -153,14 +173,90 @@
   }
 
   .hero__founder {
-    width: 132%;
+    width: 121%;
   }
 
-  .hero-card--inquiry {
-    left: var(--space-2);
+  .problems {
+    padding-block: var(--section-space-mobile);
   }
 
-  .hero-card--booking {
-    right: var(--space-2);
+  .problems__container {
+    width: calc(100% - var(--space-4));
   }
+
+  .problems__intro {
+    margin-bottom: var(--space-7);
+  }
+
+  .problems__kicker {
+    margin-bottom: var(--space-2);
+  }
+
+  .problems__title {
+    font-size: clamp(2.5rem, 12vw, 3.25rem);
+  }
+
+  .problems__copy {
+    margin-top: var(--space-4);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .problems__carousel-shell {
+    width: calc(100% + var(--space-2));
+  }
+
+  .problems__viewport {
+    padding-bottom: var(--space-4);
+  }
+
+  .problem-card,
+  .problem-card.is-active {
+    width: calc(100vw - var(--space-6));
+    height: 500px;
+    flex-basis: calc(100vw - var(--space-6));
+  }
+
+  .problem-card__content {
+    padding: var(--space-3);
+  }
+
+  .problem-card__number,
+  .problem-card.is-active .problem-card__number {
+    font-size: 2.75rem;
+  }
+
+  .problem-card__title {
+    font-size: 1.5rem;
+  }
+
+  .problem-card__quote {
+    font-size: 0.9375rem;
+  }
+
+  .problems__controls {
+    justify-content: space-between;
+    padding-right: var(--space-2);
+  }
+
+  .problems__cta {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .problems__cta-icon {
+    width: var(--space-6);
+    height: var(--space-6);
+  }
+
+  .problems__cta-title {
+    font-size: 1.5rem;
+  }
+
+  .problems__cta-button {
+    margin-top: var(--space-1);
+  }
+
 }
